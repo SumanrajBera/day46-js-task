@@ -52,6 +52,10 @@ for (let key of minorKeys) {
         e.preventDefault();
         playAudio(key.dataset.key)
         key.classList.add("active");
+
+        setTimeout(() => {
+            key.classList.remove("active")
+        }, 100)
     })
 
 
@@ -67,6 +71,10 @@ for (let key of majorKeys) {
     key.addEventListener("pointerdown", function (e) {
         playAudio(key.dataset.key)
         key.classList.add("active");
+
+        setTimeout(() => {
+            key.classList.remove("active")
+        }, 100)
     })
 
     key.addEventListener("pointerup", function (e) {
